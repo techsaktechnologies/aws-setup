@@ -18,14 +18,14 @@ APACHE INSTALLED SUCCESFULLY TILL HERE, YOU CAN CHECK BY ENTERING YOUR PUBLIC IP
 
 Step 2 — Installing MySQL
 
-	sudo apt install mysql-server
+	sudo apt-get install mysql-server
 	sudo mysql_secure_installation
 	sudo mysql
 	
 	SELECT user,authentication_string,plugin,host FROM mysql.user;
 	
 	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';    // please note here replace the "password" with yours.
-	
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'kwhaja5777';
 	FLUSH PRIVILEGES;
 	
 	SELECT user,authentication_string,plugin,host FROM mysql.user;
@@ -66,6 +66,7 @@ Move the PHP index file (highlighted above) to the first position after the Dire
 	    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 	</IfModule>	
 
+CTRL+X  and then Yes Y and ENTER
 -----------------------------------
 
 	sudo systemctl restart apache2
@@ -109,7 +110,7 @@ PHPMYADMIN INSTALL STEPS BELOW
 Step 1 — Installing phpMyAdmin
 
   sudo apt update
-  sudo apt install phpmyadmin php-mbstring php-gettext
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
 
 Warning: When the prompt appears, “apache2” is highlighted, but not selected. If you do not hit SPACE to select Apache, the installer will not move the necessary files during installation. Hit SPACE, TAB, and then ENTER to select Apache.
 
@@ -119,6 +120,13 @@ Warning: When the prompt appears, “apache2” is highlighted, but not selected
 ===================================================
 
 http://your_domain_or_IP/phpmyadmin
+
+if You find any doubts you can use this link to resolve errors
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04
+
+
+
 
 
 ====================================PERMISSIONS ADJUSTMENT================================
@@ -148,7 +156,17 @@ Standard ‘php.ini’ settings file - Change the INI settings according to the 
 Step 4: Verify the php.ini settings
   
   Refreshing the info.php page should now show your updated settings. Remember to remove the info.php when you are done changing your PHP configuration.
+  for this  you need to run this code
+  				
+		sudo apt install gedit
+		sudo -H gedit /opt/lampp/etc/php.ini
+		sudo apt -y install gnome
   
+  if you find this error    "cannot open display" 
+  
+  Check the server's sshd_config (normally /etc/ssh/sshd_config), and make sure X11Forwarding option is enabled with the line
+
+   -  X11Forwarding yes
 =========================================================================
 
 Important Notes - Common Issues during/after PHP Install
