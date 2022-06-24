@@ -35,3 +35,9 @@ sudo find html -type f -exec chmod 664 {} \;
 FOR ZIP AND UNZIP MODULE - USEFUL
 
 sudo apt-get install zip unzip
+
+=====================
+
+VERY IMPORTANT
+=====================
+By default, Ubuntu does not allow access through the web browser to any file outside of those located in /var/www, public_html directories (when enabled) and /usr/share (for web applications). If your site is using a web document root located elsewhere (such as in /srv) you may need to whitelist your document root directory in /etc/apache2/apache2.conf.
