@@ -34,6 +34,21 @@ Step 2 — Installing MySQL
 At this point, your database system is now set up and you can move on to installing PHP, the final component of the LAMP stack.
 
 
+If you et any error while setting password
+follow the commands
+
+		1. sudo mysql
+
+		2. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'mynewpassword';
+
+it show 0 rows ok -----> dont worry it changed
+
+Your error is solved now.
+
+now check this code to verify for error
+
+ 		- sudo mysql_secure_installation
+
 =========================================================
 
 
