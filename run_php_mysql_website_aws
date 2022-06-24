@@ -139,21 +139,15 @@ The correct php.ini file should be in the Apache directory (e.g. ‘/etc/php/7.1
 
 ==============================================================
 
-Step 3: Edit the Php Configuration file
+Step 3: Edit the Php.ini file
 
-  sudo nano /etc/php/7.1/apache2/php.ini
+to edit php.ini file you to convert ownership from root to ubuntu
+
+sudo chown -R ubuntu:root /etc/php/8.1/apache2/
+after that refresh /etc/php/8.1/apache2/ and edit php.ini file to shorten tag
 
 
-Standard ‘php.ini’ settings file - Change the INI settings according to the below values:
-
-  memory_limit  = 128M           
-  upload_max_filesize   = 50M                       
-  post_max_size = 50M    
-  max_execution_time = 120
-
-  sudo service apache2 restart
-  
-Step 4: Verify the php.ini settings
+if error occurs you can do below lines
   
   Refreshing the info.php page should now show your updated settings. Remember to remove the info.php when you are done changing your PHP configuration.
   for this  you need to run this code
