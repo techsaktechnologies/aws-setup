@@ -89,6 +89,8 @@ CTRL+X  and then Yes Y and ENTER
 Step 4 — Testing PHP Processing on your Web Server
 
 	sudo nano /var/www/html/info.php
+	sudo systemctl restart apache2
+	sudo systemctl status apache2
 	
 This will open a blank file. Add the following text, which is valid PHP code, inside the file:
 	<?php
