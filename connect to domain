@@ -1,3 +1,9 @@
+To connect s3 to domain
+
+1. create bucket
+2. upload files
+3. make public
+4. set policies
 Policy
 
 
@@ -17,3 +23,7 @@ Policy
         }
     ]
 }
+
+
+5.create route 53
+6. get nameservers from route53
