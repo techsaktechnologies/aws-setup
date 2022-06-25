@@ -1,0 +1,19 @@
+Policy
+
+
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1548223592786",
+    "Statement": [
+        {
+            "Sid": "Statement15777",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::techiebootcamp.com/*"
+        }
+    ]
+}
