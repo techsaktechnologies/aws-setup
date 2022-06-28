@@ -12,3 +12,10 @@ how to access
 2. update server    - sudo apt-get update
 3. install aws    - sudo apt-get install awscli
 4.   - aws s3 ls                     <-------------- this will show s3 bucket files
+
+
+
+TO copy files from ec2 to s3
+ - aws s3 cp filename s3arn
+To copy files from s3 to ec2
+ - aws s3 cp s3arn filename
