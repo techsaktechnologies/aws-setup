@@ -1,0 +1,14 @@
+to connect s3 to ec2
+
+1. creaate s3
+2. create ec2
+3. create IAM role to selectpolicy s3full access select and then add tag key name
+4. update iam role in modify IAM role in ec2
+5. thats it connection connected
+
+how to access
+
+1. open ec2 instance terminal 
+2. update server    - sudo apt-get update
+3. install aws    - sudo apt-get install awscli
+4.   - aws s3 ls                     <-------------- this will show s3 bucket files
